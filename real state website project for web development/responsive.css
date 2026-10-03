@@ -1,0 +1,81 @@
+/* Responsive rules are kept separate on purpose. */
+
+@media (max-width: 1050px) {
+  .desktop-nav { gap: 18px; }
+  .search-grid { grid-template-columns: 1fr 1fr; }
+  .search-btn { width: 100%; }
+  .property-grid { grid-template-columns: repeat(2, 1fr); }
+  .story-grid { gap: 45px; }
+  .area-grid { grid-template-columns: 1fr 1fr; }
+  .area-karachi { grid-column: span 2; }
+}
+
+@media (max-width: 800px) {
+  .container { width: min(100% - 32px, 680px); }
+
+  .desktop-nav, .nav-actions .text-btn, .nav-actions .btn-small { display: none; }
+  .menu-btn { display: block; }
+  .mobile-menu.open { display: block; }
+
+  .hero { min-height: 790px; }
+  .hero-content { padding-top: 100px; }
+  .hero-copy h1 { font-size: clamp(44px, 12vw, 67px); }
+
+  .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 20px 0; }
+  .trust-item:nth-child(2) { border-right: 0; }
+  .trust-item:nth-child(3), .trust-item:nth-child(4) { border-top: 1px solid var(--line); padding-top: 20px; }
+
+  .section { padding: 75px 0; }
+  .section-heading.split { align-items: flex-start; flex-direction: column; }
+
+  .service-grid, .story-grid, .cta-card { grid-template-columns: 1fr; }
+  .story-copy { order: -1; }
+  .story-image-wrap img { height: 440px; }
+  .story-badge { right: 14px; bottom: 14px; }
+
+  .cta-card { gap: 35px; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .container { width: min(100% - 24px, 520px); }
+  .nav-wrap { min-height: 72px; }
+  .brand { font-size: 19px; }
+
+  .hero { min-height: 790px; }
+  .hero-content { padding-top: 90px; }
+  .hero-copy { margin-bottom: 25px; }
+  .hero-copy h1 { font-size: 47px; }
+  .hero-copy p { font-size: 14px; }
+
+  .search-card { padding: 12px; border-radius: 17px; }
+  .search-tabs { width: 100%; }
+  .search-tab { flex: 1; padding: 9px 7px; font-size: 11px; }
+  .search-grid { grid-template-columns: 1fr; }
+  .search-btn { min-height: 50px; }
+  .search-meta { font-size: 11px; }
+
+  .property-grid, .area-grid { grid-template-columns: 1fr; }
+  .area-karachi { grid-column: auto; }
+
+  .property-image { height: 220px; }
+  .section-heading h2 { font-size: 42px; }
+  .story-copy h2, .cta-card h2 { font-size: 43px; }
+
+  .form-row { grid-template-columns: 1fr; }
+  .lead-form { padding: 17px; }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px 18px; }
+  .footer-bottom { flex-direction: column; gap: 6px; }
+
+  .modal { padding: 12px; }
+  .modal-panel { grid-template-columns: 1fr; max-height: 94vh; }
+  .modal-panel > img { min-height: 240px; height: 240px; }
+  .modal-body { padding: 22px; }
+  .modal-body h2 { font-size: 33px; }
+}
+
+@media (max-width: 380px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero-copy h1 { font-size: 42px; }
+}
